@@ -14,8 +14,18 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-Route::get('login',[AdminController::class,'login']);
+Route::get('login',[AdminController::class,'login'])->name('login');
 Route::post('login',[AdminController::class,'login']);
+
+Route::group(['middleware'=>'auth'],function(){
+    Route::get('logout',[AdminController::class,'logout']);
+    Route::get('home',[AdminController::class,'dashboard']);
+
+    Route::group(['prefix'=>'lead'],function(){
+        Route::get('add-lead',[AdminController::class,'add_lead']);
+    });
+}) ;
+
 
 Route::get('/', function () {
     return view('welcome');
