@@ -23,6 +23,7 @@ Route::group(['middleware'=>'auth'],function(){
 
     Route::group(['prefix'=>'lead'],function(){
         Route::get('add-lead',[AdminController::class,'add_lead']);
+        Route::post('add-lead',[AdminController::class,'add_lead']);
     });
 }) ;
 
