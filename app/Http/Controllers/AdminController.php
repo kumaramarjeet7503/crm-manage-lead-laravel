@@ -66,7 +66,35 @@ class AdminController extends Controller
             return redirect('/home') ;
 
         }
-        return view('add_lead') ;
+        return view('lead.add_lead') ;
+    }
+
+    public function manage_lead()
+    {
+        $data['leads'] = LeadModel::all() ;
+        return view('lead.manage_lead')->with($data) ;
+    }
+
+    public function delete_lead($id)
+    {
+        $lead = LeadModel::find($id) ;
+        if($lead == "")
+        {
+            return redirect('manage_lead') ;
+        }else
+        {
+            $lead->delete() ;
+            return redirect('/home') ;
+        }
+       
+    }
+
+    public function edit_lead($id)
+    {
+        $data['lead'] =  LeadModel::find($id) ;
+        
+        return view('lead.edit_lead')->with($data) ;
+       
     }
 
     public function logout()

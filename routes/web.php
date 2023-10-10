@@ -24,6 +24,10 @@ Route::group(['middleware'=>'auth'],function(){
     Route::group(['prefix'=>'lead'],function(){
         Route::get('add-lead',[AdminController::class,'add_lead']);
         Route::post('add-lead',[AdminController::class,'add_lead']);
+        Route::get('manage-lead',[AdminController::class,'manage_lead']);
+        Route::get('delete-lead/{id}',[AdminController::class,'delete_lead']);
+        Route::get('edit-lead/{id}',[AdminController::class,'edit_lead']);
+        Route::post('edit-lead/{id}',[AdminController::class,'edit_lead']);
     });
 }) ;
 
