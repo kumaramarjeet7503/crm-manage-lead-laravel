@@ -35,7 +35,7 @@
                 <td>{{$lead->lead_email}}</td>
                 <td>{{$lead->lead_phone}}</td>
                 <td>{{$lead->lead_source}}</td>
-                <td ><span ><a href="{{url('lead/edit-lead/'.$lead->id)}}" class="ri-edit-2-fill ri-lg" ></span></a><span><a href="{{url('lead/delete-lead/'.$lead->id)}}" class="ri-delete-bin-3-fill ri-lg text-danger" onclick="return confirm('Are you sure? This will be deleted')"></a></span></td>
+                <td ><span ><a href="{{url('lead/view-lead/'.$lead->id)}}" class="ri-eye-2-fill ri-lg" ></span><a href="{{url('lead/edit-lead/'.$lead->id)}}" class="ri-edit-2-fill ri-lg" ></span></a><span><a href="{{url('lead/delete-lead/'.$lead->id)}}" class="ri-delete-bin-3-fill ri-lg text-danger" onclick="return confirm('Are you sure? This will be deleted')"></a></span></td>
               </tr>
               @endforeach
             </tbody>
