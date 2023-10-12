@@ -282,10 +282,10 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-      <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+      <a class="nav-link collapsed" data-bs-target="#lead-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-menu-button-wide"></i><span>Leads</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="lead-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="{{url('lead/add-lead')}}">
               <i class="bi bi-circle"></i><span>Add Lead</span>
@@ -294,6 +294,51 @@
           <li>
             <a href="{{url('lead/manage-lead')}}">
               <i class="bi bi-circle"></i><span>Manage Lead</span>
+            </a>
+          </li>
+        </ul>
+        <a class="nav-link collapsed" data-bs-target="#accounts-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Accounts</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="accounts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{{url('account/add-account')}}">
+              <i class="bi bi-circle"></i><span>Add Account</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{url('account/manage-account')}}">
+              <i class="bi bi-circle"></i><span>Manage Account</span>
+            </a>
+          </li>
+        </ul>
+        <a class="nav-link collapsed" data-bs-target="#contact-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Contacts</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="contact-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{{url('contact/add-contact')}}">
+              <i class="bi bi-circle"></i><span>Add Contact</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{url('contact/manage-contact')}}">
+              <i class="bi bi-circle"></i><span>Manage Contacts</span>
+            </a>
+          </li>
+        </ul>
+        <a class="nav-link collapsed" data-bs-target="#deals-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Deals</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="deals-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{{url('deal/add-deal')}}">
+              <i class="bi bi-circle"></i><span>Add Deal</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{url('deal/manage-deal')}}">
+              <i class="bi bi-circle"></i><span>Manage Deals</span>
             </a>
           </li>
         </ul>
@@ -373,6 +418,7 @@
           </li>
         </ul>
       </li><!-- End Components Nav -->
+      
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">

@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use App\Models\User ;
 use App\Models\LeadModel ;
+use App\Models\DealModel ;
+use App\Models\ContactModel ;
+use App\Models\AccountModel ;
 
 class AdminController extends Controller
 {
@@ -134,6 +137,7 @@ class AdminController extends Controller
     public function convert_lead(Request $req,$id)
     {
         $data['lead'] =  LeadModel::find($id) ;
+        $lead = LeadModel::find($id) ;
         $submit = $req['submit'] ;
         if($submit == 'submit')
         {
@@ -143,7 +147,35 @@ class AdminController extends Controller
                 "deal-date" => "required", 
                 "deal-stage" => "required"
                 ]) ;
-            return redirect('lead/manage-lead') ;
+
+                //  Creating new Account
+            $account = new AccountModel() ;
+            $account->account_name = $lead->lead_company ;   
+            $account->phone = $lead->lead_phone ;
+            $account->website = "" ;
+            $account->save() ;
+
+            //  Creating new Contact
+            $contact = new ContactModel() ;
+            $contact->contact_name = $lead->lead_name ;
+            $contact->account_id = $account->id ;
+            $contact->email = $lead->lead_email ;
+            $contact->phone = $lead->lead_phone ;
+            $contact->save() ;
+
+            //  Create a new deal
+            $deal = new DealModel() ;
+            $deal->amount = $req['deal-amount'];
+            $deal->deal_name =  $req["deal-name"];
+            $deal->closing_date = $req["deal-date"];
+            $deal->stage  = $req["deal-stage"];
+            $deal->contact_id = $contact->id ;
+            $deal->account_id = $account->id ;
+            $deal->save() ;
+
+            $lead->delete() ;
+
+            return redirect('deals/manage-deals') ;
         }
         return view('lead.convert_lead')->with($data) ;
        

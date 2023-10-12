@@ -18,29 +18,29 @@
               <label class="card-title col-md-12" style="padding-bottom : 0px">Create New Account <span class="badge bg-primary text-light">{{$lead->lead_name}}</span></label>
               <label class="card-title" style="padding-top : 0px ; padding-bottom : 0px">Create New Contact <span class="badge bg-primary text-light">{{$lead->lead_company}}</span></label>
               <label class="card-title col-md-12" style="padding-top : 0px ; padding-bottom : 10px">Create New Deal for this Account</label>
-              <form method="POST" action="convert-lead\{{$lead->id}}">
+              <form method="POST" action="{{ url('lead/convert-lead').'/'.$lead->id}}">
               @csrf
                 <div class="row mb-3">
                   <label for="inputEmail3"  class="col-sm-2 col-form-label">Amount</label>
-                  <div class="col-sm-10">
+                  <div class="col-sm-5">
                     <input type="text" name="deal-amount" class="form-control" id="inputText" required>
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputEmail3" class="col-sm-2 col-form-label">Deal Name</label>
-                  <div class="col-sm-10">
+                  <div class="col-sm-5">
                     <input type="test" class="form-control" name="deal-name"  id="inputEmail" required>
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputPassword3" class="col-sm-2 col-form-label">Closing Date</label>
-                  <div class="col-sm-10">
+                  <div class="col-sm-5">
                     <input type="date" class="form-control" name="deal-date"  id="inputPassword">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputPassword3" class="col-sm-2 col-form-label">Stage</label>
-                  <div class="col-sm-10">
+                  <div class="col-sm-5">
                         @php
                         $lead_statuses = ['Qualifications','Needs Analysis','Proposal/Price','Closed Won'] ;
                         @endphp
