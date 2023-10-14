@@ -10,6 +10,7 @@ use App\Models\LeadModel ;
 use App\Models\DealModel ;
 use App\Models\ContactModel ;
 use App\Models\AccountModel ;
+use Illuminate\Support\Str;
 
 class AdminController extends Controller
 {
@@ -66,7 +67,7 @@ class AdminController extends Controller
             $lead->lead_zip = $req['lead-zip'] ;
             $lead->lead_description = $req['lead-description'] ;
             $lead->save() ;
-            return redirect('/manage-lead') ;
+            return redirect('lead/manage-lead') ;
 
         }
         return view('lead.add_lead') ;
@@ -152,7 +153,7 @@ class AdminController extends Controller
             $account = new AccountModel() ;
             $account->account_name = $lead->lead_company ;   
             $account->phone = $lead->lead_phone ;
-            $account->website = "" ;
+            $account->website =  Str::random(20); ;
             $account->save() ;
 
             //  Creating new Contact
@@ -175,7 +176,7 @@ class AdminController extends Controller
 
             $lead->delete() ;
 
-            return redirect('deals/manage-deals') ;
+            return redirect('deal/manage-deal') ;
         }
         return view('lead.convert_lead')->with($data) ;
        

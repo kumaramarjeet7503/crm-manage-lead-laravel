@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DealController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -57,13 +58,13 @@ Route::group(['middleware'=>'auth'],function(){
     });
 
     Route::group(['prefix'=>'deal'],function(){
-        Route::get('add-deal',[ContactController::class,'add_deal']);
-        Route::post('add-deal',[ContactController::class,'add_deal']);
-        Route::get('manage-deal',[ContactController::class,'manage_deal']);
-        Route::get('delete-deal/{id}',[ContactController::class,'delete_deal']);
-        Route::get('edit-deal/{id}',[ContactController::class,'edit_deal']);
-        Route::post('edit-deal/{id}',[ContactController::class,'edit_deal']);
-        Route::get('view-deal/{id}',[ContactController::class,'view_deal']);
+        Route::get('add-deal',[DealController::class,'add_deal']);
+        Route::post('add-deal',[DealController::class,'add_deal']);
+        Route::get('manage-deal',[DealController::class,'manage_deal']);
+        Route::get('delete-deal/{id}',[DealController::class,'delete_deal']);
+        Route::get('edit-deal/{id}',[DealController::class,'edit_deal']);
+        Route::post('edit-deal/{id}',[DealController::class,'edit_deal']);
+        Route::get('view-deal/{id}',[DealController::class,'view_deal']);
 
     });
 }) ;
