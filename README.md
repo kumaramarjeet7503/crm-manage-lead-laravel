@@ -37,7 +37,7 @@ This website is a digital platform that efficiently captures, tracks, and nurtur
 * Lead Creation and conversion .
 * Account and Contact Creation while new deal.
 * Individual account as well as contact addition .
-* AManage functionality for lead, account , contact and deals.
+* Manage functionality for lead, account , contact and deals.
 
 ## Screenshots
 
