@@ -31,7 +31,7 @@
               <tr>
                 <td>{{$contact->contact_name}}</td>
                 <td>{{$contact->email}}</td>
-                <td>{{$contact->account_id}}</td>
+                <td>{{$contact->getAccountDetails->account_name}}</td>
                 <td>{{$contact->phone}}</td>
                 <td ><a href="{{url('contact/edit-contact/'.$contact->id)}}" class="ri-edit-2-fill ri-lg" ></span></a><span><a href="{{url('contact/delete-contact/'.$contact->id)}}" class="ri-delete-bin-3-fill ri-lg text-danger" onclick="return confirm('Are you sure? This will be deleted')"></a></span></td>
               </tr>

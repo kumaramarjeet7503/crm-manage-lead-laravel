@@ -33,8 +33,8 @@
               <tr>
               <td>{{$deal->deal_name}}</td>
                 <td>{{$deal->amount}}</td>
-                <td>{{$deal->account_id}}</td>
-                <td>{{$deal->contact_id}}</td>
+                <td>{{$deal->getAccountDetails->account_name}}</td>
+                <td>{{$deal->getContactDetails->contact_name}}</td>
                 <td>{{$deal->closing_date}}</td>
                 <td>{{$deal->stage}}</td>
                 <td ><a href="{{url('deal/edit-deal/'.$deal->id)}}" class="ri-edit-2-fill ri-lg" ></span></a><span><a href="{{url('deal/delete-deal/'.$deal->id)}}" class="ri-delete-bin-3-fill ri-lg text-danger" onclick="return confirm('Are you sure? This will be deleted')"></a></span></td>

@@ -10,4 +10,14 @@ class DealModel extends Model
     use HasFactory;
     protected $table = 'deals' ;
     protected $primaryKey = 'id' ;
+
+    public function getAccountDetails()
+    {
+        return $this->hasOne(AccountModel::class,"id","account_id") ;
+    }
+
+    public function getContactDetails()
+    {
+        return $this->hasOne(ContactModel::class,"id","contact_id") ;
+    }
 }

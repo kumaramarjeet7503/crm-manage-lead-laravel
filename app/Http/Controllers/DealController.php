@@ -12,7 +12,7 @@ class DealController extends Controller
 {
     public function manage_deal()
     {
-        $data['deals'] = DealModel::all() ;
+        $data['deals'] = DealModel::with('getAccountDetails')->with('getContactDetails')->get() ;
         return view('deal.manage_deal')->with($data) ;
     }
 }
