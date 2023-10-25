@@ -60,6 +60,15 @@ This website is a digital platform that efficiently captures, tracks, and nurtur
 
 ### Manage Deal
 
-![manage-deal](https://github.com/kumaramarjeet7503/crm-manage-lead-laravel/assets/64517073/8d6c457c-2ff1-47d8-ba8a-dcd6fadd7b0e)
+![manage-deal](https://github.com/kumaramarjeet7503/crm-manage-lead-laravel/assets/64517073/11763da6-64b8-443c-87bb-0904c2c63eb9)
 
+### Update Deal
+
+![update-deal](https://github.com/kumaramarjeet7503/crm-manage-lead-laravel/assets/64517073/146c3adc-de47-4947-bc9c-e572ad911cb0)
+
+### Manage Account
+![manage-account](https://github.com/kumaramarjeet7503/crm-manage-lead-laravel/assets/64517073/5f262031-615f-4f06-8cab-3e7bd43968d5)
+
+### Manage Contact
+![manage-contact](https://github.com/kumaramarjeet7503/crm-manage-lead-laravel/assets/64517073/086a5761-1375-4bc1-8cee-262c82d56b7c)
 
