@@ -2,7 +2,7 @@
 
 This website is a digital platform that efficiently captures, tracks, and nurtures potential customer inquiries or "leads." It automates lead collection, prioritizes prospects, and streamlines communication, enhancing sales team efficiency. Integrated with CRM systems, it aids in targeted marketing, analytics, and ensures that no valuable lead is overlooked, ultimately driving sales growth.
 
- * Watch [Product Tutorial here](https://drive.google.com/file/d/1lNxhEcjhrQTGs-ZyJHbSOxxK--4p_t9u/view?usp=sharing)
+ * Watch [Product Tutorial here](https://drive.google.com/file/d/1OYDNvJNd6CEkSUMWssodrw1HrLT3We_8/view?usp=sharing)
 
 ![add-lead](https://github.com/kumaramarjeet7503/crm-manage-lead-laravel/assets/64517073/397d4c6e-5f29-4f11-a29f-76c60758a640)
 
@@ -45,7 +45,8 @@ This website is a digital platform that efficiently captures, tracks, and nurtur
 ![login](https://github.com/kumaramarjeet7503/crm-manage-lead-laravel/assets/64517073/61fb192b-3010-4506-8930-964639e1f1d9)
 
 ### Dashboard
-![dashboard](https://github.com/kumaramarjeet7503/crm-manage-lead-laravel/assets/64517073/ddadeb31-08d8-4784-87ce-c58fed51d8b5)
+
+![dashboard](https://github.com/kumaramarjeet7503/crm-manage-lead-laravel/assets/64517073/1fab2a8a-2f84-44d4-91a7-7119ca0ae7bd)
 
 
 ### Add lead
