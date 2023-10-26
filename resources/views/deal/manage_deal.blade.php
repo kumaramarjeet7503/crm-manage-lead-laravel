@@ -4,7 +4,7 @@
 <main id="main" class="main">
 
 <div class="pagetitle">
-  <h1>Manage Deals</h1>
+  <h1>Manage Deal</h1>
 
 </div><!-- End Page Title -->
 
@@ -14,7 +14,7 @@
 
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Deal</h5>
+          <h5 class="card-title">Deals</h5>
           <!-- Table with stripped rows -->
           <table class="table datatable">
             <thead>

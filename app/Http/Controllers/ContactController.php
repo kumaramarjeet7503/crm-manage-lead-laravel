@@ -16,6 +16,7 @@ class ContactController extends Controller
         $data['contacts'] = ContactModel::with('getAccountDetails')->get() ;
         return view('contact.manage_contact')->with($data) ;
     }
+
     public function add_contact(Request $req)
     {
          $data['accounts'] = AccountModel::all() ;
@@ -23,8 +24,8 @@ class ContactController extends Controller
         if($submit == 'submit')
         {
             $req->validate([
-                "account-name" => "required",
-                "account-phone" => "required"
+                "contact-name" => "required",
+                "contact-phone" => "required"
                 ]) ;
 
             $contact = new ContactModel ;
@@ -40,35 +41,37 @@ class ContactController extends Controller
 
     public function edit_contact(Request $req,$id)
     {
-        // $account = ContactModel::find($id) ;
-        // $data['account'] =  $account  ;
+        $contact = ContactModel::find($id) ;
+        $data['contact'] = $contact ;
+        $data['accounts'] = AccountModel::all() ;
         $submit = $req['submit'] ;
         if($submit == 'submit')
         {
             $req->validate([
-                "account-name" => "required",
-                "account-phone" => "required"
+                "contact-name" => "required",
+                "contact-phone" => "required"
                 ]) ;
 
-            // $account->account_name = $req['account-name'] ;
-            // $account->phone = $req['account-phone'] ;
-            // $account->website = $req['account-website'] ;
-            // $account->update() ;
+            $contact->contact_name = $req['contact-name'] ;
+            $contact->account_id = $req['account-id'] ;
+            $contact->email = $req['contact-email'] ;
+            $contact->phone = $req['contact-phone'] ;
+            $contact->update() ;
             return redirect('contact/manage-contact') ;
         }
-        return view('contact.edit_contact') ;
+        return view('contact.edit_contact')->with($data) ;
     }
 
     public function delete_contact($id)
     {
-        $account = ContactModel::find($id) ;
-        if($account == "")
+        $contact = ContactModel::find($id) ;
+        if($contact == "")
         {
-            return redirect('account/manage-account') ;
+            return redirect('contact/manage-contact') ;
         }else
         {
-            $account->delete() ;
-            return redirect('account/manage-account') ;
+            $contact->delete() ;
+            return redirect('contact/manage-contact') ;
         }
        
     }

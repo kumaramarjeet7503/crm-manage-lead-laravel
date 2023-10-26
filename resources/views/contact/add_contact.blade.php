@@ -15,42 +15,37 @@
             <div class="card-body">
               <h5 class="card-title" style="padding-bottom : 0px">Add Contact </h5>
               <!-- Horizontal Form -->
-              <form method="POST" action="{{ url('contact/add-contact').'/'}}">
+              <form method="POST" action="{{ url('contact/add-contact')}}">
               @csrf
                 <div class="row mb-3">
                   <label for="inputEmail3"  class="col-sm-2 col-form-label">Name</label>
                   <div class="col-sm-5">
-                    <input type="text" name="account-name" class="form-control" id="inputText" required>
+                    <input type="text" name="contact-name" class="form-control" id="inputText" required>
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                   <div class="col-sm-5">
-                    <input type="email" class="form-control" name="account-phone"  id="inputEmail" required>
+                    <input type="email" class="form-control" name="contact-email"  id="inputEmail" required>
                   </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputEmail3" class="col-sm-2 col-form-label">Phone</label>
                   <div class="col-sm-5">
-                    <input type="test" class="form-control" name="account-phone"  id="inputPhone" required>
+                    <input type="test" class="form-control" name="contact-phone"  id="inputPhone" required>
                   </div>
                 </div>
-
-            <div class="row mb-3">
-              <label for="inputAccounts" class="form-label">Account</label>
-              <select id="inputState" class="form-select" name="account-id">
-                <option selected disabled>Choose...</option>
-                @foreach($accounts as $account)
-                <option>{{ $account->account_name }}</option>
-                @endforeach
-              </select>
-            </div>
-                <!-- <div class="row mb-3">
-                  <label for="inputPassword3" class="col-sm-2 col-form-label">Account</label>
+                <div class="row mb-3">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Account</label>
                   <div class="col-sm-5">
-                    <input type="text" class="form-control" name="account-website"  id="inputwebsite">
+                  <select id="inputState" class="form-select" name="account-id">
+                    <option selected disabled>Choose...</option>
+                    @foreach($accounts as $account)
+                    <option value="{{$account->id}}" >{{ $account->account_name }}</option>
+                    @endforeach
+                  </select>
                   </div>
-                </div> -->
+                </div>
                 </div>
 
 
